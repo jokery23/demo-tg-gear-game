@@ -1,0 +1,19 @@
+.card-wrapper {
+  border-radius: var(--s2);
+  border: 1px solid var(--primary-color);
+  padding: var(--s05);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  display: flex;
+  height: 100%;
+  box-sizing: border-box;
+  background: linear-gradient(146deg, var(--antique-white), #dccbb5);
+}
+
+.card {
+  border-radius: var(--s2);
+  color: var(--antique-white);
+  padding: var(--s05);
+  font-weight: 600;
+  background: var(--primary-color);
+  flex: 1 1 100%;
+}

@@ -1,6 +1,31 @@
 
+
 @import url('https://fonts.googleapis.com/css2?family=Smythe&display=swap');
 
 body {
   font-family: 'Smythe', system-ui, cursive;
+  height: 100vh;
+  width: 100vw;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #704214;
+  --secondary-color: #FAEBD7;
+  --accent-color: #6e2f3b;
+  --info-color: #80acaa;
+
+  --font-size: 1rem;
+  --font-size-s: 0.75rem;
+  --font-size-l: 1.5rem;
+  --s05: 0.5rem;
+  --s1: 1rem;
+  --s2: 2rem;
+  --s3: 3rem;
+
+  --bronze: #CD7F32;
+  --copper: #B87333;
+  --dark-sepia: #704214;
+  --antique-white: #FAEBD7;
 }
