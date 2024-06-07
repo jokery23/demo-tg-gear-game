@@ -1,0 +1,82 @@
+.gear-game {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  --local-color: #8f6133;
+}
+
+.gear-score {
+  padding: var(--s2) var(--s05);
+}
+
+.speed {
+  text-align: center;
+  font-weight: 600;
+  font-size: 3rem;
+}
+
+.gear {
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  &__icon-wrapper {
+    width: 50%;
+    height: 50%;
+    position: relative;
+
+    &--running {
+      animation-name: spin;
+      animation-duration: 10s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+
+  }
+
+  &__icon {
+
+    fill: var(--bronze);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    &--bg {
+      fill: var(--local-color);
+      transform: scale(1.02, 1.02);
+    }
+  }
+
+  &__center {
+    position: absolute;
+    top: 50%;
+    background: var(--primary-color);
+    border-radius: 50%;
+    border: 2px solid var(--local-color);
+    width: 32%;
+    height: 32%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -16%;
+    font-size: var(--font-size-l);
+    user-select: none;
+  }
+}
+
+.gear-controls {
+  display: flex;
+  padding: var(--s2) var(--s05);
+  justify-content: center;
+  gap: var(--s1);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

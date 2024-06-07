@@ -1,0 +1,14 @@
+.button {
+  padding: var(--s05);
+  background-color: var(--antique-white);
+  color: var(--primary-color);
+  border: 2px solid var(--bronze);
+  border-radius: var(--s05);
+  font-size: var(--s2);
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
