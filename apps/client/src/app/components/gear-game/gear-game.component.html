@@ -1,6 +1,11 @@
 <div class="gear-game">
   <div class="gear-score">
-    <div class="speed" >{{ getPoints() }}</div>
+    <div class="gear-score__points" >{{ getPoints() | number : '0.4-4' }}</div>
+    <div class="gear-score__icon-wrap" >
+      <div class="gear-score__icon" >
+        <app-gear-currency-icon></app-gear-currency-icon>
+      </div>
+    </div>
   </div>
   <div class="gear">
     <div
@@ -25,12 +30,12 @@
     </div>
     <div
       class="gear__center"
-    ></div>
+    >{{ level() }}</div>
   </div>
   <div class="gear-controls">
     <app-button
       (click)="toggle()"
     >Start</app-button>
-    <app-button (click)="speedUp()">Speed Up({{ speed() }})</app-button>
+    <app-button (click)="levelUp()">Level Up</app-button>
   </div>
 </div>

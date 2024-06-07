@@ -21,11 +21,11 @@ export class GearGameComponent implements OnInit {
   @Input() height = '300px';
 
   degree = signal(0);
-  speed = signal(0);
+  level = signal(0);
   running = signal(false);
   points = signal(0);
 
-  stepPoints = 0.001;
+  stepPoints = 0.000001;
   limitPoints = 30;
 
   ngOnInit() {
@@ -45,15 +45,15 @@ export class GearGameComponent implements OnInit {
   }
 
   getDuration() {
-    return `${this.limitPoints - this.speed()}s`;
+    return `${this.limitPoints - this.level()}s`;
   }
 
-  getPoints() {
-    return `${Math.round(this.points())}$`;
+  getPoints(): number {
+    return this.points();
   }
 
   toggle() {
-    if (this.speed() >= this.limitPoints) {
+    if (this.level() >= this.limitPoints) {
       return;
     }
 
@@ -61,18 +61,18 @@ export class GearGameComponent implements OnInit {
       this.running.set(true);
     }
 
-    this.speed.set(this.speed() + 1);
+    this.level.set(this.level() + 1);
   }
 
   addPoints() {
-    this.points.set(this.points() + this.speed() * this.stepPoints);
+    this.points.set(this.points() + this.level() * this.stepPoints);
   }
 
-  speedUp() {
-    if (!this.running() || this.speed() >= this.limitPoints) {
+  levelUp() {
+    if (!this.running() || this.level() >= this.limitPoints) {
       return;
     }
 
-    this.speed.set(this.speed() + 1);
+    this.level.set(this.level() + 1);
   }
 }
