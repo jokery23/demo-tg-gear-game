@@ -34,9 +34,9 @@ export class GearGameComponent implements OnDestroy {
   }
 
   getDuration() {
-    return `${
-      this.gearGameService.limitPoints - this.gearGameService.level()
-    }s`;
+    const seconds = this.gearGameService.limitPoints - this.gearGameService.level();
+
+    return `${seconds === 0 ? 0.5 : seconds}s`;
   }
 
   getPoints(): number {

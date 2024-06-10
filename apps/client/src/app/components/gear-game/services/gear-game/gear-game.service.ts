@@ -15,13 +15,13 @@ export class GearGameService {
   points = signal(0);
   nextLevelPoints = signal(0);
 
-  stepPoints = 0.0001;
+  stepPoints = 0.001;
   limitPoints = 3;
 
   levelPoints: LevelPoints[] = [
-    { level: 1, points: 0.1 },
-    { level: 2, points: 0.2 },
-    { level: 3, points: 0.3 },
+    { level: 1, points: 1 },
+    { level: 2, points: 2 },
+    { level: 3, points: 3 },
   ];
 
   destroy$ = new Subject<boolean>();
